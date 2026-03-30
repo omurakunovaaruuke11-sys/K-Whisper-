@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>До́рамы и Корейский</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffe4e1, #e0ffff);
+            text-align: center;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #ff4500;
+        }
+
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff4500;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #korean-word {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🎬 До́рамы и Корейский</h1>
+
+<div class="section">
+    <h2>Популярные дорамы</h2>
+    <p>Аварийная посадка на вас</p>
+    <button onclick="window.open('https://www.youtube.com/watch?v=KX8iPjJt0Uk', '_blank')">Смотреть трейлер</button>
+
+    <p>Итэвон класс</p>
+    <button onclick="window.open('https://www.youtube.com/watch?v=1LAQm8jJh9c', '_blank')">Смотреть трейлер</button>
+</div>
+
+<div class="section">
+    <h2>Учим корейский</h2>
+    <button onclick="newWord()">Новое слово</button>
+    <div id="korean-word"></div>
+</div>
+
+<script>
+const words = [
+    {korean: "안녕하세요", meaning: "Привет"},
+    {korean: "감사합니다", meaning: "Спасибо"},
+    {korean: "사랑해요", meaning: "Я тебя люблю"},
+    {korean: "좋아요", meaning: "Хорошо/Классно"},
+    {korean: "배고파요", meaning: "Я голоден"}
+];
+
+function newWord() {
+    const random = Math.floor(Math.random() * words.length);
+    const word = words[random];
+    document.getElementById("korean-word").innerText = ${word.korean} — ${word.meaning};
+}
+</script>
+
+</body>
+</html>
